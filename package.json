@@ -33,7 +33,7 @@
             {
                 "language": "kusanagi",
                 "scopeName": "source.ku",
-                "path": "./syntaxes/Major.tmLanguage"
+                "path": "./syntaxes/Kusanagi.tmLanguage"
             }
         ],
         "configuration": {
