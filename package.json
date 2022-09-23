@@ -1,0 +1,74 @@
+{
+    "name": "vscode-kusanagi",
+    "displayName": "Kusanagi",
+    "description": "Kusanagi language support",
+    "version": "0.4.4",
+    "publisher": "rvanasa",
+    "repository": "https://github.com/rvanasa/vscode-kusanagi",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "images/logo.png",
+    "galleryBanner": {
+        "color": "#000000",
+        "theme": "dark"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "kusanagi",
+                "aliases": [
+                    "Kusanagi",
+                    "kusanagi"
+                ],
+                "extensions": [
+                    ".ku"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "kusanagi",
+                "scopeName": "source.ku",
+                "path": "./syntaxes/Major.tmLanguage"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Kusanagi",
+            "properties": {}
+        },
+        "commands": []
+    },
+    "activationEvents": [
+        "onLanguage:kusanagi",
+        "onCommand:kusanagi.startService"
+    ],
+    "main": "./out/extension",
+    "dependencies": {
+        "vscode-languageclient": "^8.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "^14",
+        "@types/prettier": "^2.7.0",
+        "@types/vscode": "^1.53.0",
+        "@types/which": "^2.0.1",
+        "prettier": "^2.7.1",
+        "rimraf": "^3.0.2",
+        "typescript": "^4.8.2",
+        "vsce": "^2.11.0"
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run build",
+        "build": "rimraf ./out && tsc -p .",
+        "lint": "tslint -p .",
+        "package": "vsce package",
+        "watch": "tsc -watch -p .",
+        "format": "prettier --write .",
+        "publish": "vsce publish"
+    }
+}
