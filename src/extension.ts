@@ -5,4 +5,8 @@ const config = workspace.getConfiguration('kusanagi');
 
 let client: LanguageClient;
 
-export function activate(context: ExtensionContext) {}
+export function activate(context: ExtensionContext) {
+    config; // @ts-ignore
+    client; // @ts-ignore
+    context; // @ts-ignore
+}

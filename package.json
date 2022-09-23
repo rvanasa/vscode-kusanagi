@@ -2,7 +2,7 @@
     "name": "vscode-kusanagi",
     "displayName": "Kusanagi",
     "description": "Kusanagi language support",
-    "version": "0.4.4",
+    "version": "0.1.0",
     "publisher": "rvanasa",
     "repository": "https://github.com/rvanasa/vscode-kusanagi",
     "engines": {
@@ -11,7 +11,6 @@
     "categories": [
         "Programming Languages"
     ],
-    "icon": "images/logo.png",
     "galleryBanner": {
         "color": "#000000",
         "theme": "dark"
